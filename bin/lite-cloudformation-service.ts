@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
-import { LiteCloudformationServiceStack } from '../lib/lite-cloudformation-service-stack';
+import 'source-map-support/register'
+import * as CDK from '@aws-cdk/core'
+import { LiteCloudformationServiceStack } from '../lib/lite-cloudformation-service-stack'
 
-const app = new cdk.App();
+const app = new CDK.App()
 new LiteCloudformationServiceStack(app, 'LiteCloudformationServiceStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
@@ -13,9 +13,9 @@ new LiteCloudformationServiceStack(app, 'LiteCloudformationServiceStack', {
    * and Region that are implied by the current CLI configuration. */
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
 
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
-
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
-});
+  env: {
+    account: '071045444115',
+    region: 'us-east-2',
+  },
+})
