@@ -6,14 +6,17 @@
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk:bootstrap": "cdk bootstrap",
+    "cdk:diff": "cdk diff",
+    "cdk:synth": "cdk synth",
+    "cdk:deploy": "cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.111.0",
     "@types/aws-lambda": "8.10.77",
-    "@types/jest": "^26.0.10",
+    "@types/jest": "26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "1.111.0",
     "jest": "26.4.2",
