@@ -1,4 +1,4 @@
-import { S3Handler } from 'aws-lambda'
+import { S3Handler, APIGatewayProxyHandler } from 'aws-lambda'
 import * as unzipper from 'unzipper'
 import * as AWS from 'aws-sdk'
 
@@ -44,5 +44,32 @@ export const unzipObjectHandler: S3Handler = async (event) => {
     await Promise.all(uploadPromises)
   } catch (error) {
     // TODO: log to cloudwatch?
+  }
+}
+
+export const buildWebsiteHandler: APIGatewayProxyHandler = async (event) => {
+  try {
+    // 1. get theme files
+
+    // 2. get theme configs
+
+    // 3. get menu
+
+    // 4. build with liquid
+
+    // 5. save to S3
+
+    return {
+      body: 'OK',
+      statusCode: 200,
+      headers: {},
+    }
+  } catch (error) {
+    // TODO: log to cloudwatch?
+    return {
+      body: JSON.stringify(error.stack ?? JSON.stringify(error, null, 2)),
+      statusCode: 500,
+      headers: {},
+    }
   }
 }
