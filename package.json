@@ -6,22 +6,34 @@
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
-  },
-  "devDependencies": {
-    "@aws-cdk/assert": "1.108.0",
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
-    "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
-    "aws-cdk": "1.108.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "cdk": "cdk",
+    "cdk:bootstrap": "cdk bootstrap",
+    "cdk:diff": "cdk diff",
+    "cdk:synth": "cdk synth",
+    "cdk:deploy": "cdk deploy"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.108.0",
-    "source-map-support": "^0.5.16"
+    "@aws-cdk/aws-apigateway": "1.111.0",
+    "@aws-cdk/aws-lambda": "1.111.0",
+    "@aws-cdk/aws-lambda-event-sources": "1.111.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.111.0",
+    "@aws-cdk/aws-s3": "1.111.0",
+    "@aws-cdk/core": "1.111.0",
+    "aws-lambda": "1.0.6",
+    "source-map-support": "0.5.16",
+    "unzipper": "0.10.11"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.111.0",
+    "@types/aws-lambda": "8.10.77",
+    "@types/jest": "26.0.10",
+    "@types/node": "10.17.27",
+    "@types/unzipper": "0.10.4",
+    "aws-cdk": "1.111.0",
+    "jest": "26.4.2",
+    "ts-jest": "26.2.0",
+    "ts-node": "9.0.0",
+    "typescript": "3.9.7"
   }
 }
